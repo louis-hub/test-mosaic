@@ -8,13 +8,14 @@ Login
 {% endblock %}
 
 {% block javascripts %}
+    {{ encore_entry_script_tags('login') }}
 {% endblock %}
 
 {% block body %}
 <div>
-{% if error %}
-{{ error.messageKey | trans(error.messageData, 'security') }}
-{% endif %}
+    {% if error %}
+    {{ error.messageKey | trans(error.messageData, 'security') }}
+    {% endif %}
 </div>
 <form action="{{ path('login') }}" method="post">
     <div>
