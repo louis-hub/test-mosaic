@@ -3,10 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-<div id="root"></div>
+<div id="index" username="{{ username }}"></div>
 {% endblock %}
 
 
 {% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('index') }}
 {% endblock %}
